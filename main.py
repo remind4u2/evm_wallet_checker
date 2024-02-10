@@ -3,8 +3,8 @@ from web3 import Web3
 # Сети:      
 # ETH, ZKSYNC, SCROLL, BASE, LINEA, ZKF, MANTA, ARBITRUM, OP, NOVA, ZORA, BSC, FTM, AVAXC, MATIC, CORE, CELO, METIS, HARMONY, GNOSIS
 # для ZORA нужен vpn в РФ и РБ
-CHAIN = 'ETH'        
-DELIMETR = '; '        # разделитель, можете использовать свой, например ' | ' или ' ' или '-'
+CHAIN = 'MATIC'        
+DELIMETR = ';'        # разделитель, можете использовать свой, например ' | ' или ' ' или '-'
 SHOW_TOKEN = False     # если True то в конце суммы, на каждой стрке выводит валюту токена , наприме ETH или USDC
 
 RPCS = [
