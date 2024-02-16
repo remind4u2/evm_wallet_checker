@@ -4,6 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+TIMEOUT = 5 # подбираем для себя комфортную задержку. На быстрых машинах достаточно 1 сек, и ногда надо и 10 сек
+
 if __name__ == "__main__":
     with open("wallets.txt", "r") as f:
         WALLETS = [row.strip() for row in f]
@@ -12,6 +14,8 @@ if __name__ == "__main__":
 
         options = webdriver.ChromeOptions()
         options.add_argument('--headless')
+        options.add_argument('--no-sandbox')  
+        options.add_argument('--disable-dev-shm-usage')
 
         # Initialize the WebDriver with the provided Chrome driver path and options
         driver = webdriver.Chrome(options=options)
@@ -27,7 +31,7 @@ if __name__ == "__main__":
             url = f'https://layerzeroscan.com/address/{wallet}'
             
             driver.get(url)
-            time.sleep(1)
+            time.sleep(TIMEOUT) 
 
             # Wait for the element with class "mui-hx4d9l" to appear (timeout after 10 seconds)
             total_messages_span = WebDriverWait(driver, 10).until(
@@ -36,6 +40,8 @@ if __name__ == "__main__":
                 
             # Extract text from the span
             total_messages = total_messages_span.text
+            if (total_messages == '-'):
+                total_messages = 0
             total_tx = total_tx + int(total_messages)
             print(f"{wallet};{total_messages}")
 
