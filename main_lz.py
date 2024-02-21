@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-TIMEOUT = 5 # подбираем для себя комфортную задержку. На быстрых машинах достаточно 1 сек, и ногда надо и 10 сек
+TIMEOUT = 8 # подбираем для себя комфортную задержку. На быстрых машинах достаточно 1 сек, и ногда надо и 10 сек
 
 if __name__ == "__main__":
     with open("wallets.txt", "r") as f:
