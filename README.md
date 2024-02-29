@@ -1,4 +1,4 @@
-# EVM Wallet & LayerZero & Socket (Bungee) Tx Checker
+# SlowRich checker | Универсальный чекер кошельков
 
 Подпишись на https://t.me/slow_rich что бы быть вкурсе обновлений
 
