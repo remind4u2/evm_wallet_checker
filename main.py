@@ -28,6 +28,7 @@ RPCS = [
     {'chain': 'GNOSIS',     'rpc': 'https://rpc.ankr.com/gnosis',            'scan': 'https://gnosisscan.io',               'token': 'XDAI'},
     {'chain': 'CELO',       'rpc': 'https://rpc.ankr.com/celo',              'scan': 'https://celoscan.io',                 'token': 'CELO'},
     {'chain': 'HARMONY',    'rpc': 'https://rpc.ankr.com/harmony',           'scan': 'https://explorer.harmony.one',        'token': 'ONE'},
+    {'chain': 'ZKEVM',      'rpc': 'https://1rpc.io/polygon/zkevm',          'scan': 'https://zkevm.polygonscan.com/',      'token': 'ETH'},
 ]
 
 def check_rpc(chain):
