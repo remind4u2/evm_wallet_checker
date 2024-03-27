@@ -29,4 +29,7 @@ if __name__ == "__main__":
         
                     text = json.loads(resp.text)
                     poh = text['poh']
-                    print(f'{wallet};{poh}')
+                    if (poh == False):
+                        print(f'{wallet};{poh}')
+
+        print(f'------------------------------------------------')
